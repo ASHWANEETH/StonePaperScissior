@@ -1,9 +1,35 @@
+body{
+  box-sizing: border-box;
+}
+
+canvas {
+  margin: 0;
+  display: block;
+  position: absolute;
+  pointer-events: none;
+}
+
+
+
+h1{
+  text-align: center;
+  font-weight: 900;
+  font-size:50px ;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.main{
+  padding: 50px;
+  background-color: rgb(206, 254, 179);
+  border-radius: 15px;
+  margin: 2%;
+}
+
 .rocktxt,.paptxt,.scistxt{
   visibility: hidden;
 }
 
 .txt{
-  font-family: cursive;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 900;
   font-size: 20px;
 }
@@ -44,6 +70,6 @@ img{
   width:  152px;
 }
 
-body{
-  background-color: rgb(231, 255, 217);
+.small{
+  width: 80px;
 }

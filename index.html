@@ -3,75 +3,34 @@
 <head>
   <title>Stone Paper Scissor Game</title>
   <link rel="stylesheet" href="style.css">
+ 
 </head>
 <body>
-  <h1>Stone Paper Scissor Game</h1>
+  <h1>Rock Paper Scissor</h1>
 
-  <div class="container">
+  <div class="main">
+&nbsp;
 
-  <div class="imgcontainer">
-    <img src="rock.png" onclick="game('rock')" class="rock" alt="" srcset="">
-    <p class="rocktxt txt"> ROCK</p> 
+   <div class="container">
+     <div class="imgcontainer">
+        <img src="rock.png" onclick="game('rock')" class="rock" alt="" srcset="">
+        <p class="rocktxt txt"> ROCK</p> 
+       </div>
+     <div class="imgcontainer">
+        <img src="paper.png" onclick="game('paper')" class="paper" alt="" srcset="">
+         <p class="paptxt txt"> PAPER</p>
+     </div>
+     <div class="imgcontainer">
+        <img src="scis.png" onclick="game('scissor')" class="scissor" alt="" srcset="">
+         <p class="scistxt txt">SCISSOR</p>
+     </div>   
+   </div>
+
+   <h1 class="res"></h1>
+   <h1 class="score"></h1>
+ 
   </div>
-  <div class="imgcontainer">
-    <img src="paper.png" onclick="game('paper')" class="paper" alt="" srcset="">
-     <p class="paptxt txt"> PAPER</p>
-  </div>
-  <div class="imgcontainer">
-    <img src="scis.png" onclick="game('scissor')" class="scissor" alt="" srcset="">
-    <p class="scistxt txt">SCISSOR</p>
-  </div>   
-</div>
+  <script src="script.js"></script>
 
-
-  <h1 class="res"></h1>
-  <h1 class="score"></h1>
-
-  <script>
-
-let paptxt = document.querySelector(".paptxt");
-let scistxt = document.querySelector(".scistxt");
-let rocktxt = document.querySelector(".rocktxt");
-let rock = document.querySelector(".rock");
-let paper = document.querySelector(".paper");
-let sci = document.querySelector(".scissor");
-
-rock.addEventListener('mouseenter', () => rocktxt.style.visibility = "visible");
-rock.addEventListener('mouseleave', () => rocktxt.style.visibility = "hidden");
-
-paper.addEventListener('mouseenter', () => paptxt.style.visibility = "visible");
-paper.addEventListener('mouseleave', () => paptxt.style.visibility = "hidden");
-
-sci.addEventListener('mouseenter', () => scistxt.style.visibility = "visible");
-sci.addEventListener('mouseleave', () => scistxt.style.visibility = "hidden");
-
-    
-    
-    let score = {
-      win:0,loss:0,tie:0
-    }
-    let ar = ['rock', 'scissor', 'paper'];
-    function game(gameonbaby){
-      let comp = ar[Math.floor(Math.random() * ar.length)];
-      let user = gameonbaby;
-
-      if(comp === user) {
-        document.querySelector('.res').innerHTML = `GAME DRAW!! <h6>Your choice: ${user} || Computer Choice: ${comp}</h6>`;score.tie++;
-      } else if(comp === "rock" && user === "scissor") {
-        document.querySelector('.res').innerHTML = `You lost <h6>Your choice: ${user} || Computer Choice: ${comp}</h6>`;score.loss++;
-      } else if(comp === "scissor" && user === "rock") {
-        document.querySelector('.res').innerHTML = `You Won <h6>Your choice: ${user} || Computer Choice: ${comp}</h6>`;score.win++;
-      } else if(comp === "paper" && user === "scissor") {
-        document.querySelector('.res').innerHTML = `You Won <h6>Your choice: ${user} || Computer Choice: ${comp}</h6>`;score.win++;
-      } else if(comp === "scissor" && user === "paper") {
-        document.querySelector('.res').innerHTML = `You lost <h6>Your choice: ${user} || Computer Choice: ${comp}</h6>`;score.loss++;
-      } else if(comp === "rock" && user === "paper") {
-        document.querySelector('.res').innerHTML = `You won <h6>Your choice: ${user} || Computer Choice: ${comp}</h6>`;score.win++;
-      } else if(comp === "paper" && user === "rock") {
-        document.querySelector('.res').innerHTML = `You lost <h6>Your choice: ${user} || Computer Choice: ${comp}</h6>`;score.loss++;
-      }
-      document.querySelector('.score').innerHTML = `Your score Win:${score.win} Loss:${score.loss} Tie:${score.tie}`;
-    }
-  </script>
 </body>
 </html>
