@@ -1,0 +1,50 @@
+.rocktxt,.paptxt,.scistxt{
+  display:none;
+}
+
+.container{
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: space-evenly; */
+  flex-direction: column;
+}
+.imgcontainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+}
+.xtx{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
+img{
+  width: 150px;
+  height: auto;
+  transition: 0.1s;
+}
+.rock:hover{
+  filter: drop-shadow(7px 7px 7px #2bedff);
+  transition: 0.1s;
+  width: 152px;
+}
+
+.paper:hover{
+  filter: drop-shadow(7px 7px 7px #fffb23);
+  transition: 0.1s;
+  width: 152px;
+}
+.scissor:hover{
+  filter: drop-shadow(7px 7px 7px #da46fb);
+  transition: 0.1s;
+  width:  152px;
+}
+
+body{
+  /* background-image: url(bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%; */
+}

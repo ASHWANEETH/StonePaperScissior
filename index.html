@@ -6,10 +6,24 @@
 </head>
 <body>
   <h1>Stone Paper Scissor Game</h1>
-  <button onclick="game()" class="stone">stone</button>
-  <button onclick="game()" class="scissor">scissor</button>
-  <button onclick="game()" class="paper">paper</button>
-  
+
+<div class="container">
+  <div class="imgcontainer">
+    <img src="rock.png" onclick="game('rock')" class="rock" alt="" srcset="">
+    <img src="paper.png" onclick="game('paper')" class="paper" alt="" srcset="">
+    <img src="scis.png" onclick="game('scissor')" class="scissor" alt="" srcset="">
+  </div>
+  <br>
+  <br>
+    <div class="xtx">
+      <p class="rocktxt"> ROCK</p>
+      <p class="paptxt"> PAPER</p>
+      <p class="scistxt">SCISSOR</p>
+    </div>
+    
+</div>
+
+
   <h1 class="res"></h1>
   <h1 class="score"></h1>
 
@@ -17,24 +31,24 @@
     let score = {
       win:0,loss:0,tie:0
     };
-    let ar = ['stone', 'scissor', 'paper'];
-    function game(){
+    let ar = ['rock', 'scissor', 'paper'];
+    function game(gameonbaby){
       let comp = ar[Math.floor(Math.random() * ar.length)];
-      let user = event.target.innerHTML;
+      let user = gameonbaby;
 
       if(comp === user) {
         document.querySelector('.res').innerHTML = `GAME DRAW!! <h6>Your choice: ${user} || Computer Choice: ${comp}</h6>`;score.tie++;
-      } else if(comp === "stone" && user === "scissor") {
+      } else if(comp === "rock" && user === "scissor") {
         document.querySelector('.res').innerHTML = `You lost <h6>Your choice: ${user} || Computer Choice: ${comp}</h6>`;score.loss++;
-      } else if(comp === "scissor" && user === "stone") {
+      } else if(comp === "scissor" && user === "rock") {
         document.querySelector('.res').innerHTML = `You Won <h6>Your choice: ${user} || Computer Choice: ${comp}</h6>`;score.win++;
       } else if(comp === "paper" && user === "scissor") {
         document.querySelector('.res').innerHTML = `You Won <h6>Your choice: ${user} || Computer Choice: ${comp}</h6>`;score.win++;
       } else if(comp === "scissor" && user === "paper") {
         document.querySelector('.res').innerHTML = `You lost <h6>Your choice: ${user} || Computer Choice: ${comp}</h6>`;score.loss++;
-      } else if(comp === "stone" && user === "paper") {
+      } else if(comp === "rock" && user === "paper") {
         document.querySelector('.res').innerHTML = `You won <h6>Your choice: ${user} || Computer Choice: ${comp}</h6>`;score.win++;
-      } else if(comp === "paper" && user === "stone") {
+      } else if(comp === "paper" && user === "rock") {
         document.querySelector('.res').innerHTML = `You lost <h6>Your choice: ${user} || Computer Choice: ${comp}</h6>`;score.loss++;
       }
       document.querySelector('.score').innerHTML = `Your score Win:${score.win} Loss:${score.loss} Tie:${score.tie}`;
