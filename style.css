@@ -1,24 +1,25 @@
 .rocktxt,.paptxt,.scistxt{
-  display:none;
+  visibility: hidden;
+}
+
+.txt{
+  font-family: cursive;
+  font-weight: 900;
+  font-size: 20px;
 }
 
 .container{
   display: flex;
   /* align-items: center; */
-  /* justify-content: space-evenly; */
-  flex-direction: column;
+  justify-content: space-evenly;
+  /* align-content: space-between; */
 }
 .imgcontainer{
+  flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  flex-wrap: nowrap;
-}
-.xtx{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: nowrap;
+  /* flex-wrap: nowrap; */
 }
 
 img{
@@ -44,7 +45,5 @@ img{
 }
 
 body{
-  background-image: url(bg.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background-color: rgb(231, 255, 217);
 }

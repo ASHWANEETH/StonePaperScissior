@@ -7,20 +7,20 @@
 <body>
   <h1>Stone Paper Scissor Game</h1>
 
-<div class="container">
+  <div class="container">
+
   <div class="imgcontainer">
     <img src="rock.png" onclick="game('rock')" class="rock" alt="" srcset="">
-    <img src="paper.png" onclick="game('paper')" class="paper" alt="" srcset="">
-    <img src="scis.png" onclick="game('scissor')" class="scissor" alt="" srcset="">
+    <p class="rocktxt txt"> ROCK</p> 
   </div>
-  <br>
-  <br>
-    <div class="xtx">
-      <p class="rocktxt"> ROCK</p>
-      <p class="paptxt"> PAPER</p>
-      <p class="scistxt">SCISSOR</p>
-    </div>
-    
+  <div class="imgcontainer">
+    <img src="paper.png" onclick="game('paper')" class="paper" alt="" srcset="">
+     <p class="paptxt txt"> PAPER</p>
+  </div>
+  <div class="imgcontainer">
+    <img src="scis.png" onclick="game('scissor')" class="scissor" alt="" srcset="">
+    <p class="scistxt txt">SCISSOR</p>
+  </div>   
 </div>
 
 
@@ -28,9 +28,28 @@
   <h1 class="score"></h1>
 
   <script>
+
+let paptxt = document.querySelector(".paptxt");
+let scistxt = document.querySelector(".scistxt");
+let rocktxt = document.querySelector(".rocktxt");
+let rock = document.querySelector(".rock");
+let paper = document.querySelector(".paper");
+let sci = document.querySelector(".scissor");
+
+rock.addEventListener('mouseenter', () => rocktxt.style.visibility = "visible");
+rock.addEventListener('mouseleave', () => rocktxt.style.visibility = "hidden");
+
+paper.addEventListener('mouseenter', () => paptxt.style.visibility = "visible");
+paper.addEventListener('mouseleave', () => paptxt.style.visibility = "hidden");
+
+sci.addEventListener('mouseenter', () => scistxt.style.visibility = "visible");
+sci.addEventListener('mouseleave', () => scistxt.style.visibility = "hidden");
+
+    
+    
     let score = {
       win:0,loss:0,tie:0
-    };
+    }
     let ar = ['rock', 'scissor', 'paper'];
     function game(gameonbaby){
       let comp = ar[Math.floor(Math.random() * ar.length)];
