@@ -23,7 +23,7 @@ let paptxt = document.querySelector(".paptxt");
         win:0,loss:0,tie:0
       };
       localStorage.setItem("scoree",JSON.stringify(score));
-      document.querySelector('.score').innerHTML = `<h5>Win:${score.win} &nbsp Loss:${score.loss} &nbspTie:${score.tie}</h5>`;
+      document.querySelector('.score').innerHTML = `<h5>Win:${score.win} &nbsp Loss:${score.loss} &nbsp Tie:${score.tie}</h5>`;
     }
 
     let score1 = localStorage.getItem('scoree');
@@ -37,7 +37,7 @@ let paptxt = document.querySelector(".paptxt");
       win:0,loss:0,tie:0
     };}
 
-    document.querySelector('.score').innerHTML = `<h5>Win:${score.win} &nbsp Loss:${score.loss} &nbspTie:${score.tie}</h5>`;
+    document.querySelector('.score').innerHTML = `<h5>Win:${score.win} &nbsp Loss:${score.loss} &nbsp Tie:${score.tie}</h5>`;
 
     let ar = ['rock', 'scissor', 'paper'];
     function game(gameonbaby){
@@ -72,7 +72,7 @@ let paptxt = document.querySelector(".paptxt");
       }
       localStorage.setItem("scoree",JSON.stringify(score));
 
-      document.querySelector('.score').innerHTML = `<h5>Win:${score.win} &nbsp Loss:${score.loss} &nbspTie:${score.tie}</h5>`;
+      document.querySelector('.score').innerHTML = `<h5>Win:${score.win} &nbsp Loss:${score.loss} &nbsp Tie:${score.tie}</h5>`;
 
      
       
