@@ -17,11 +17,28 @@ let paptxt = document.querySelector(".paptxt");
     let r = "<img src='rock.png' class='small'>";
     let p = "<img src='paper.png' class='small'>";
     let s = "<img src='scis.png' class='small'>";
-    
-    
-    let score = {
-      win:0,loss:0,tie:0
+
+    function rest(){
+      score = {
+        win:0,loss:0,tie:0
+      };
+      localStorage.setItem("scoree",JSON.stringify(score));
+      document.querySelector('.score').innerHTML = `<h5>Win:${score.win} &nbsp Loss:${score.loss} &nbspTie:${score.tie}</h5>`;
     }
+
+    let score1 = localStorage.getItem('scoree');
+    let score;
+    
+    if(score1 !== null){
+      score=JSON.parse(score1); 
+    }
+    else{
+      score = {
+      win:0,loss:0,tie:0
+    };}
+
+    document.querySelector('.score').innerHTML = `<h5>Win:${score.win} &nbsp Loss:${score.loss} &nbspTie:${score.tie}</h5>`;
+
     let ar = ['rock', 'scissor', 'paper'];
     function game(gameonbaby){
       let comp = ar[Math.floor(Math.random() * ar.length)];
@@ -53,6 +70,12 @@ let paptxt = document.querySelector(".paptxt");
       } else if(comp === "paper" && user === "rock") {
         document.querySelector('.res').innerHTML = `You lost :( <h6>You: ${usrim} &nbsp;&nbsp;Computer: ${compim}</h6>`;score.loss++;
       }
+      localStorage.setItem("scoree",JSON.stringify(score));
+
       document.querySelector('.score').innerHTML = `<h5>Win:${score.win} Loss:${score.loss} Tie:${score.tie}</h5>`;
-    }
+
+     
+      
+    } 
+   
 

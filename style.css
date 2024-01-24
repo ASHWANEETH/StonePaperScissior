@@ -9,6 +9,17 @@ canvas {
   pointer-events: none;
 }
 
+.rst{
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.rst:hover,.rst:active{
+  background-color: rgb(249, 199, 101);
+  color: rgb(0, 0, 0);
+}
 
 
 h1{
