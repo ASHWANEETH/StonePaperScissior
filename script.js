@@ -59,14 +59,14 @@ let paptxt = document.querySelector(".paptxt");
         document.querySelector('.res').innerHTML = `GAME DRAW!! <h6>You: ${usrim} &nbsp;&nbsp;Computer: ${compim}</h6>`;score.tie++;
       } else if(comp === "rock" && user === "scissor") {
         document.querySelector('.res').innerHTML = `You lost :( <h6>You: ${usrim} &nbsp;&nbsp;Computer: ${compim}</h6>`;score.loss++;
-      } else if(comp === "scissor" && user === "rock") {
-        document.querySelector('.res').innerHTML = `You Won :) <h6>You: ${usrim} &nbsp;&nbsp;Computer: ${compim}</h6>`; score.win++;
+      } else if(comp === "scissor" && user === "rock") { 
+        confetti();document.querySelector('.res').innerHTML = `You Won :) <h6>You: ${usrim} &nbsp;&nbsp;Computer: ${compim}</h6>`; score.win++;
       } else if(comp === "paper" && user === "scissor") {
-        document.querySelector('.res').innerHTML = `You Won :) <h6>You: ${usrim} &nbsp;&nbsp;Computer: ${compim}</h6>`;score.win++;
+        confetti();document.querySelector('.res').innerHTML = `You Won :) <h6>You: ${usrim} &nbsp;&nbsp;Computer: ${compim}</h6>`;score.win++;
       } else if(comp === "scissor" && user === "paper") {
         document.querySelector('.res').innerHTML = `You lost :( <h6>You: ${usrim} &nbsp;&nbsp;Computer: ${compim}</h6>`;score.loss++;
       } else if(comp === "rock" && user === "paper") {
-        document.querySelector('.res').innerHTML = `You Won :) <h6>You: ${usrim} &nbsp;&nbsp;Computer: ${compim}</h6>`;score.win++;
+        confetti();document.querySelector('.res').innerHTML = `You Won :) <h6>You: ${usrim} &nbsp;&nbsp;Computer: ${compim}</h6>`;score.win++;
       } else if(comp === "paper" && user === "rock") {
         document.querySelector('.res').innerHTML = `You lost :( <h6>You: ${usrim} &nbsp;&nbsp;Computer: ${compim}</h6>`;score.loss++;
       }
