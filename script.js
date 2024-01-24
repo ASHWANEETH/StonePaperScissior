@@ -72,7 +72,7 @@ let paptxt = document.querySelector(".paptxt");
       }
       localStorage.setItem("scoree",JSON.stringify(score));
 
-      document.querySelector('.score').innerHTML = `<h5>Win:${score.win} Loss:${score.loss} Tie:${score.tie}</h5>`;
+      document.querySelector('.score').innerHTML = `<h5>Win:${score.win} &nbsp Loss:${score.loss} &nbspTie:${score.tie}</h5>`;
 
      
       
